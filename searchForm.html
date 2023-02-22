@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ </head>
+ <body>
+    <nav class="navbar navbar-expand-lg navbar-dark border bg-primary p-2 m-2 rounded">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="container-fluid collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Главная</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Автозапчасти для иномарок</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Каталог автомобилей
+                  </a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <button class="btn btn-success me-2">Войти</button>
+              </form>
+        </div>
+        <!-- <ul class="row col-12 align-items-center" style="list-style-type: none;">
+            <li class="col-1">Главная</li>
+            <li class="col-2">Автозапчасти для иномарок</li>
+            <li class="col-7">Каталог автомобилей</li>
+            <li class="col-2 btn btn-success">Войти</li>
+        </ul> -->
+    </nav>
+    <div class="search p-4 m-2 border rounded col-4">
+        <div class="price-type">
+            <p>Тип прайслиста</p>
+            
+            <div class="btn-group pt-1" role="group" aria-label="Тип прайслиста" id="TypePrice">
+                <input type="radio" class="btn-check checked" name="btnradio" id="CheckedType_1" autocomplete="off">
+                <label class="btn btn-outline-primary" for="CheckedType_1">Дешевле</label>
+
+                <input type="radio" class="btn-check " name="btnradio" id="CheckedType_2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="CheckedType_2">Быстрее</label>
+            </div>
+        </div>
+        <div class="brand">
+            <p class="">Бренд</p>
+            <select name="" id="" class="brand-select"></select>
+        </div>
+    </div>
+ </body>
+ </html>
