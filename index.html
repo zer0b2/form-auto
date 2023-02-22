@@ -1,129 +1,176 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
- </head>
- <body>
-    <nav class="navbar navbar-expand-lg navbar-dark border bg-primary p-2 m-2 rounded">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="container-fluid collapse navbar-collapse">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Главная</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Автозапчасти для иномарок</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Каталог автомобилей
-                  </a>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <button class="btn btn-success me-2">Войти</button>
-              </form>
-        </div>
-    </nav>
-    <div class="conteiner p-3 row">
-      <div class="col-12 col-xl-3 p-4 m-2 border rounded  ">
-          <div class="price-type mb-4">
-              <h5>Тип прайслиста</h5>
-              
-              <div class="btn-group pt-1" role="group" aria-label="Тип прайслиста" id="TypePrice">
-                  <input type="radio" class="btn-check checked" name="btnradio" id="CheckedType_1" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="CheckedType_1">Дешевле</label>
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>european equipment</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="shortcut icon" href="https://cdn.juna-life.ru/favicon.ico">
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-light static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#!"><img style="width: 12vw; min-width: 97px;" src="/img/logo.svg"></a>
+                <a class="nav-link" href="./templates/searchForm.html">Заказать автозапчасти</a>
+                <a class="btn btn-primary btn-lg" style="border-radius: 0;" href="tel:+74994443507">📞 +7(499)444-35-07
 
-                  <input type="radio" class="btn-check " name="btnradio" id="CheckedType_2" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="CheckedType_2">Быстрее</label>
-              </div>
-          </div>
-          <div class="brands-wrap mb-4">
-            <h5>Бренды</h5>
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="brandDropdown" aria-expanded="false">Test</button>
-              <ul class="dropdown-menu" aria-labelledby="brandDropdown">
-                <li><a class="dropdown-item" href="#">audi</a></li>
-                <li><a class="dropdown-item" href="#">bwm</a></li>
-                <li><a class="dropdown-item" href="#">toyota</a></li>
-                <li><a class="dropdown-item" href="#">subaru</a></li>
-              </ul>
+                </a>
             </div>
-            <button class="btn btn-primary">Показать весь прайс</button>
-        </div>
-        <div class="type-wrap mb-4">
-          <h5>Тип</h5>
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="brandDropdown" aria-expanded="false">Test</button>
-            <ul class="dropdown-menu" aria-labelledby="brandDropdown">
-              <li><a class="dropdown-item" href="#">Все</a></li>
-              <li><a class="dropdown-item" href="#">оригинал</a></li>
-              <li><a class="dropdown-item" href="#">Не оригинал</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="art-search-wrap">
-          <h5>Поиск по артикулу</h5>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Артикул производителя" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-primary" type="button" id="button-addon2">Поиск</button>
-          </div>
-        </div>
-        <div class="art-search-wrap">
-          <h5>Загрузка артикулов из файла</h5>
-          <div class="input-group mb-3">
-            <input id="formFile" class="form-control" accept=".xls,.csv,.xlsx" type="file" _bl_c5b2fcf8-7e22-4167-94d1-16b0410ef546="">
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-8 row mt-2">
-        <div class="col-2 col-md-2">
-          <h6 class="mb-4 border-bottom border-primary">Марка</h6>
-          <p>AE</p>
-        </div>
-        <div class="col-3 col-md-2">
-          <h6 class="mb-4 border-bottom border-primary">Артикул</h6>
-          <p>61-0641953</p>
-          <p>поставка 10 дней</p>
-        </div>
-        <div class="col-4 col-md-2">
-          <h6 class="mb-4 border-bottom border-primary">Название</h6>
-          <p>КОНДЕНСАТОР BMW F01,F02,F10</p>
-        </div>
-        <div class="col-4 col-md-2">
-          <h6 class="mb-4 border-bottom border-primary">Цена</h6>
-          <p>303,47€</p>
-        </div>
-        <div class="col-3 col-md-2">
-          <h6 class="mb-4 border-bottom border-primary">Кол-во</h6>
-          <input class="form-control" type="number" min="1">
-        </div>
-        <div class="col-3 col-md-2">
-          <button type="button" class="btn btn-primary border-bottom border-primary align-content-around mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
-              <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
-              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-            </svg>
-             Добавить все</button>
-          <div class="">
-            <button type="button" class="btn btn-primary align-content-around">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-            </button><!--!-->
-        <button type="button" class="btn btn-primary"><!--!--><i class="bi-basket" role="img"></i> <span class="badge badge-light">2 - 606,94€</span></button>
-          </div>
-        </div>
-      </div>
-  </div>
- </body>
- </html>
+        </nav>
+        <!-- Masthead-->
+
+        <header class="">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <img src="/img/jambotron.jpg">
+                    <div class="col-xl-6">
+                        <div class="text-center">
+                            <!-- Page heading-->
+                           <!-- <h1>Оставить заявку</h1> -->
+                            <form class="form-subscribe" id="contactForm" action="sendit.php"  method="post" data-sb-form-api-token="API_TOKEN">
+                                <!-- Email address input-->
+                                <div class="row">
+                                    <div class="col" style="margin: 7px 9px 0px 9px;">
+                                        <input class="form-control form-control-lg" name="named"  id="named" type="text" placeholder="Название" required />
+                                        <div class="invalid-feedback" data-sb-feedback="named:required">Нужно ввести название.</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col" style="margin: 7px 9px 0px 9px;">
+
+                                        <input class="form-control form-control-lg" name="producted" id="producted" type="text" placeholder="Производитель" required />
+                                        <div class="invalid-feedback" data-sb-feedback="producted:required">Нужно ввести производителя.</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col" style="margin: 7px 9px 0px 9px;">
+
+                                        <input class="form-control form-control-lg"  name="sn" id="sn" type="text" placeholder="Серийный номер" required />
+                                        <div class="invalid-feedback" data-sb-feedback="sn:required">Нужно ввести серийный номер.</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col" style="margin: 7px 9px 0px 9px;">
+
+                                        <input class="form-control form-control-lg"  name="tel" id="tel" type="tel" placeholder="Телефон" required />
+                                        <div class="invalid-feedback" data-sb-feedback="tel:required">Нужно ввести телефон.</div>
+                                        <!-- <div class="invalid-feedback" data-sb-feedback="tel:email">Неправильный формат.</div> -->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col" style="margin: 7px 9px 0px 9px;">
+
+                                        <input class="form-control form-control-lg"  name="username" id="username" type="text" placeholder="Имя" required />
+                                        <div class="invalid-feedback" data-sb-feedback="username:required">Нужно ввести ваше имя.</div>
+                                    </div>
+                                </div> 
+                                <!--                                
+                                <div class="row">
+                                    <div class="col" style="margin: 7px 9px 0px 9px;">
+
+                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Имя" data-sb-validations="required,email" />
+                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                                    </div>
+                                </div>   
+                                -->                                                                                                                             
+                                <div class="row">
+                                <div class="col" style="margin: 7px 9px 0px 9px;">
+				     <button class="btn btn-primary btn-lg " id="submitButton" type="submit">Отправить</button></div>
+
+                                <!-- Submit success message-->
+                                <!---->
+                                <!-- This is what your users will see when the form-->
+                                <!-- has successfully submitted-->
+                                <div class="d-none" id="submitSuccessMessage">
+                                    <div class="text-center mb-3">
+                                        <div class="fw-bolder">Form submission successful!</div>
+                                        <p>To activate this form, sign up at</p>
+                                        <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    </div>
+                                </div>
+                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--
+        <section class="testimonials text-center bg-light">
+            <div class="container">
+                <h2 class="mb-5">What people are saying...</h2>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-1.jpg" alt="..." />
+                            <h5>Margaret E.</h5>
+                            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-2.jpg" alt="..." />
+                            <h5>Fred S.</h5>
+                            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-3.jpg" alt="..." />
+                            <h5>Sarah W.</h5>
+                            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+        <!-- Footer-->
+    <!--
+        <footer class="footer bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                        <ul class="list-inline mb-2">
+                            <li class="list-inline-item"><a href="#!">About</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="#!">Contact</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
+                        </ul>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2021. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item me-4">
+                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item me-4">
+                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        -->
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

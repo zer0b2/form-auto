@@ -1,0 +1,131 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+ </head>
+ <body>
+    <nav class="navbar navbar-expand-lg navbar-dark border bg-primary p-2 m-2 rounded">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="container-fluid collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="../index.html">Главная</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Автозапчасти для иномарок</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Каталог автомобилей
+                  </a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <button class="btn btn-success me-2">Войти</button>
+              </form>
+        </div>
+    </nav>
+    <div class="conteiner p-3 row">
+      <div class="col-12 col-xl-3 p-4 m-2 border rounded ">
+          <div class="price-type mb-4">
+              <h5>Тип прайслиста</h5>
+              
+              <div class="btn-group pt-1" role="group" aria-label="Тип прайслиста" id="TypePrice">
+                  <input type="radio" class="btn-check checked" name="btnradio" id="CheckedType_1" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="CheckedType_1">Дешевле</label>
+
+                  <input type="radio" class="btn-check " name="btnradio" id="CheckedType_2" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="CheckedType_2">Быстрее</label>
+              </div>
+          </div>
+          <div class="brands-wrap mb-4">
+            <h5>Бренды</h5>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="brandDropdown" aria-expanded="false">Test</button>
+              <ul class="dropdown-menu" aria-labelledby="brandDropdown">
+                <li><a class="dropdown-item" href="#">audi</a></li>
+                <li><a class="dropdown-item" href="#">bwm</a></li>
+                <li><a class="dropdown-item" href="#">toyota</a></li>
+                <li><a class="dropdown-item" href="#">subaru</a></li>
+              </ul>
+            </div>
+            <button class="btn btn-primary">Показать весь прайс</button>
+        </div>
+        <div class="type-wrap mb-4">
+          <h5>Тип</h5>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="brandDropdown" aria-expanded="false">Test</button>
+            <ul class="dropdown-menu" aria-labelledby="brandDropdown">
+              <li><a class="dropdown-item" href="#">Все</a></li>
+              <li><a class="dropdown-item" href="#">оригинал</a></li>
+              <li><a class="dropdown-item" href="#">Не оригинал</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="art-search-wrap">
+          <h5>Поиск по артикулу</h5>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Артикул производителя" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-primary" type="button" id="button-addon2">Поиск</button>
+          </div>
+        </div>
+        <div class="art-search-wrap">
+          <h5>Загрузка артикулов из файла</h5>
+          <div class="input-group mb-3">
+            <input id="formFile" class="form-control" accept=".xls,.csv,.xlsx" type="file" _bl_c5b2fcf8-7e22-4167-94d1-16b0410ef546="">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-9 row mt-2">
+        <div class="col-12"><button type="button" class="btn btn-primary border-bottom border-primary align-content-around mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>
+           Добавить все</button>
+          </div>
+        <div class="col-2 col-md-2">
+          <h6 class="mb-4 border-bottom border-primary">Марка</h6>
+          <p>AE</p>
+        </div>
+        <div class="col-3 col-md-2">
+          <h6 class="mb-4 border-bottom border-primary">Артикул</h6>
+          <p>61-0641953</p>
+          <p>поставка 10 дней</p>
+        </div>
+        <div class="col-4 col-md-2">
+          <h6 class="mb-4 border-bottom border-primary">Название</h6>
+          <p>КОНДЕНСАТОР BMW F01,F02,F10</p>
+        </div>
+        <div class="col-4 col-md-1">
+          <h6 class="mb-4 border-bottom border-primary">Цена</h6>
+          <p>303,47€</p>
+        </div>
+        <div class="col-3 col-md-2">
+          <h6 class="mb-4 border-bottom border-primary">Кол-во</h6>
+          <input class="form-control" type="number" min="1">
+        </div>
+        <div class="col-5 col-md-3">
+          
+          <div class="">
+            <button type="button" class="btn btn-primary align-content-around">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </button><!--!-->
+        <button type="button" class="btn btn-primary"><!--!--><i class="bi-basket" role="img"></i> <span class="badge badge-light">2 - 606,94€</span></button>
+          </div>
+        </div>
+      </div>
+  </div>
+ </body>
+ </html>
