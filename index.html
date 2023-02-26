@@ -27,40 +27,90 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <style>
+      .btn-primary,
+      .dropdown-toggle {
+        background-color: #0191ff;
+      }
+      .forBanner {
+        background-color: #0191ff;
+      }
+      .banner {
+        background-image: url(./img/jambotron.jpg);
+        max-width: 40vh;
+        height: 28vh;
+        background-position: center;
+        background-size: cover;
+      }
+      .navbar {
+        padding: 0;
+      }
+      .navbar-brand img {
+        width: 100%;
+        margin: 7px 0 4px -2px;
+      }
+      .navBtn {
+        width: 100%;
+      }
+      .logo {
+        background-image: url(./img/logo.svg);
+        background-position: center;
+        background-size: cover;
+        width: 9vw;
+        height: 7vh;
+      }
+      .vcenter {
+          display: inline-block;
+          vertical-align: middle;
+          float: none;
+      }
+      .rowVert {
+        display: flex;
+        align-items: center;
+      } 
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-light static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#!"
-          ><img style="width: 12vw; min-width: 97px" src="./img/logo.svg"
-        /></a>
-        <a
-          class="btn btn-primary btn-lg"
-          style="border-radius: 0"
-          href="./templates/searchForm.html"
-        >
-          Заказ автозапчастей
-        </a>
-        <a
-          class="btn btn-primary btn-lg"
-          style="border-radius: 0"
-          href="./templates/searchForm.html"
-        >
-          Каталог автомобилей
-        </a>
-        <a
-          class="btn btn-primary btn-lg"
-          style="border-radius: 0"
-          href="tel:+74994443507"
-          >📞 +7(499)444-35-07
-        </a>
+      <div class="container position-relative">
+        <div class="row rowVert">
+          <div class="col-sm-12 col-md-3 col-lg-3  mb-1 p-sm-4 align-items-center align-items-center">
+            <a class="navbar-brand" href="#!">
+              <img src="./img/logo.svg">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 mb-1 mb-sm-2 col-sm-12 justify-content-cente">
+            <a
+              class="btn btn-primary btn-lg navBtn"
+              style="border-radius: 0"
+              href="./templates/searchForm.html"
+            >
+              Заказ автозапчастей
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 mb-1 mb-sm-2 col-sm-12  align-items-center">
+            <a
+              class="btn btn-primary btn-lg navBtn"
+              style="border-radius: 0"
+              href="./templates/searchForm.html"
+            >
+              Каталог автомобилей
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 mb-1 mb-sm-2 col-sm-12  align-items-center">
+            <a
+            class="btn btn-primary btn-lg navBtn"
+            style="border-radius: 0"
+              href="tel:+74994443507"
+              >📞 +7(499)444-35-07
+            </a>
+          </div>
+        </div>
       </div>
     </nav>
     <div class="container position-relative">
-      <div class="row justify-content-center">
-        <div class="col-lg-12 offset-lg-4">
-          <img src="./img/jambotron.jpg" />
-        </div>
+      <div class="justify-content-center align-items-center forBanner">
+        <div class="col-lg-12 offset-lg-3 banner"></div>
       </div>
     </div>
     <div class="container-fluid">
