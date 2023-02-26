@@ -1,176 +1,354 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>european equipment</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link rel="shortcut icon" href="https://cdn.juna-life.ru/favicon.ico">
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-light static-top">
-            <div class="container">
-                <a class="navbar-brand" href="#!"><img style="width: 12vw; min-width: 97px;" src="./img/logo.svg"></a>
-                <a class="btn btn-primary btn-lg" style="border-radius: 0;" href="./templates/searchForm.html">Заказать автозапчасти</a>
-                <a class="btn btn-primary btn-lg" style="border-radius: 0;" href="tel:+74994443507">📞 +7(499)444-35-07
-
-                </a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>european equipment</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark border bg-primary p-2">
+      <button
+        class="navbar-toggler collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Переключатель навигации"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="../index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#start">Заказать автозапчасти</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Каталог автомобилей </a>
+          </li>
+        </ul>
+      </div>
+      <form class="d-flex">
+        <button class="btn btn-success me-2">Войти</button>
+      </form>
+    </nav>
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+            <div class="col-lg-12 offset-lg-4">
+                <img src="./img/jambotron.jpg" />
             </div>
-        </nav>
-        <!-- Masthead-->
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 offset-lg-4">
+          <div class="col-12 col-lg-4 types d-flex flex-column justify-content-between">
+            <div class="type col-2 my-4">
+              <label class="mb-3"><strong id="start">Тип</strong></label> <br />
+              <button
+                class="btn btn-primary dropdown-toggle"
+                type="button"
+                id="typeDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Все
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+                <li><a class="dropdown-item">Все</a></li>
+                <li><a class="dropdown-item">Оригинал</a></li>
+                <li><a class="dropdown-item">Не Оригинал</a></li>
+              </ul>
+            </div>
 
-        <header class="">
-            <div class="container position-relative">
-                <div class="row justify-content-center">
-                    <img src="./img/jambotron.jpg">
-                    <div class="col-xl-6">
-                        <div class="text-center">
-                            <!-- Page heading-->
-                           <!-- <h1>Оставить заявку</h1> -->
-                            <form class="form-subscribe" id="contactForm" action="sendit.php"  method="post" data-sb-form-api-token="API_TOKEN">
-                                <!-- Email address input-->
-                                <div class="row">
-                                    <div class="col" style="margin: 7px 9px 0px 9px;">
-                                        <input class="form-control form-control-lg" name="named"  id="named" type="text" placeholder="Название" required />
-                                        <div class="invalid-feedback" data-sb-feedback="named:required">Нужно ввести название.</div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col" style="margin: 7px 9px 0px 9px;">
+            <div class="plist-type my-4">
+              <label class="mb-3"><strong>Тип прайслиста</strong></label
+              ><br />
+              <div
+                class="btn-group pt-1"
+                role="group"
+                aria-label="Тип прайслиста"
+                id="TypePrice"
+              >
+                <input
+                  type="radio"
+                  class="btn-check checked"
+                  name="btnradio"
+                  id="CheckedType_1"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="CheckedType_1"
+                  >Дешевле</label
+                >
 
-                                        <input class="form-control form-control-lg" name="producted" id="producted" type="text" placeholder="Производитель" required />
-                                        <div class="invalid-feedback" data-sb-feedback="producted:required">Нужно ввести производителя.</div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col" style="margin: 7px 9px 0px 9px;">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="CheckedType_2"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="CheckedType_2"
+                  >Быстрее</label
+                >
+              </div>
+            </div>
 
-                                        <input class="form-control form-control-lg"  name="sn" id="sn" type="text" placeholder="Серийный номер" required />
-                                        <div class="invalid-feedback" data-sb-feedback="sn:required">Нужно ввести серийный номер.</div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col" style="margin: 7px 9px 0px 9px;">
-
-                                        <input class="form-control form-control-lg"  name="tel" id="tel" type="tel" placeholder="Телефон" required />
-                                        <div class="invalid-feedback" data-sb-feedback="tel:required">Нужно ввести телефон.</div>
-                                        <!-- <div class="invalid-feedback" data-sb-feedback="tel:email">Неправильный формат.</div> -->
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col" style="margin: 7px 9px 0px 9px;">
-
-                                        <input class="form-control form-control-lg"  name="username" id="username" type="text" placeholder="Имя" required />
-                                        <div class="invalid-feedback" data-sb-feedback="username:required">Нужно ввести ваше имя.</div>
-                                    </div>
-                                </div> 
-                                <!--                                
-                                <div class="row">
-                                    <div class="col" style="margin: 7px 9px 0px 9px;">
-
-                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Имя" data-sb-validations="required,email" />
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-                                    </div>
-                                </div>   
-                                -->                                                                                                                             
-                                <div class="row">
-                                <div class="col" style="margin: 7px 9px 0px 9px;">
-				     <button class="btn btn-primary btn-lg " id="submitButton" type="submit">Отправить</button></div>
-
-                                <!-- Submit success message-->
-                                <!---->
-                                <!-- This is what your users will see when the form-->
-                                <!-- has successfully submitted-->
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder">Form submission successful!</div>
-                                        <p>To activate this form, sign up at</p>
-                                        <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                    </div>
-                                </div>
-                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            </form>
-                        </div>
-                    </div>
+            <div class="brands">
+              <label class="mb-3"><strong>Бренд</strong></label> <br />
+              <button
+                class="btn btn-primary dropdown-toggle"
+                type="button"
+                id="brandsDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Все
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="brandsDropdown">
+                <li><a class="dropdown-item">Все</a></li>
+                <li><a class="dropdown-item">AE</a></li>
+                <li><a class="dropdown-item">BMW</a></li>
+                <li><a class="dropdown-item">AUDI</a></li>
+              </ul>
+              <button class="btn btn-primary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-cloud-download"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"
+                  />
+                  <path
+                    d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"
+                  />
+                </svg>
+                Показать весь прайс
+              </button>
+            </div>
+          </div>
+          <div
+            class="col col-lg-4 articles d-flex flex-column justify-content-between"
+          >
+            <div class="article-search my-4">
+              <label class="mb-3"><strong>Поиск по артиклу</strong></label>
+              <br />
+              <div class="input-group has-validation mb-">
+                <input
+                  id="inputPartNumber"
+                  type="text"
+                  class="form-control"
+                  placeholder="Артикул производителя"
+                  aria-describedby="button-searc validationPartNumber"
+                />
+                <button class="btn btn-primary" type="button" id="button-searc">
+                  Поиск
+                </button>
+                <div id="validationPartNumber" class="invalid-feedback">
+                  Артикул " " не найден!
                 </div>
+              </div>
             </div>
-        </header>
-        <!--
-        <section class="testimonials text-center bg-light">
-            <div class="container">
-                <h2 class="mb-5">What people are saying...</h2>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-1.jpg" alt="..." />
-                            <h5>Margaret E.</h5>
-                            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-2.jpg" alt="..." />
-                            <h5>Fred S.</h5>
-                            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-3.jpg" alt="..." />
-                            <h5>Sarah W.</h5>
-                            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="article-file">
+              <label for="formFile" class="form-label mb-3"
+                ><strong>Загрузка артикулов из файла</strong></label
+              >
+              <input
+                id="formFile"
+                class="form-control"
+                accept=".xls,.csv,.xlsx"
+                type="file"
+              />
             </div>
-        </section>
-        -->
-        <!-- Footer-->
-    <!--
-        <footer class="footer bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="#!">About</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Contact</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
-                        </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2021. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="col-lg-12 offset-lg-4">
+          <div class="btns my-4">
+            <div class="total">
+              <p><strong>Итого: </strong> 1 - 303,47€</p>
             </div>
-        </footer>
-        -->
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+
+            <div class="add-all gap-2 d-flex align-items-end">
+              <button class="btn btn-primary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-cart-plus"
+                  viewBox="0 2 16 16"
+                >
+                  <path
+                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"
+                  />
+                  <path
+                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                  />
+                </svg>
+                Добавить все
+              </button>
+
+              <button class="btn btn-primary">Оформить заказ</button>
+            </div>
+          </div>
+          <div class="items row p-2">
+            <div
+              class="col-12 col-sm-5 col-xl-3 col-xxl-2 p-3 item m-1 border border-secondary rounded"
+            >
+              <div class="c-mark">
+                <label><strong>Марка</strong></label>
+                <p>AE</p>
+              </div>
+
+              <div class="art border-top">
+                <label><strong>Артикул</strong></label>
+                <p>61-0641953</p>
+                <label class="small text-secondary">поставка 10 дней</label>
+              </div>
+
+              <div class="name border-top">
+                <label><strong>Название</strong></label>
+                <p>КОНДЕНСАТОР BMW F01,F02,F10</p>
+              </div>
+
+              <div class="price border-top">
+                <label><strong>Цена</strong></label>
+                <p>303,47€</p>
+              </div>
+
+              <div class="count border-top">
+                <label><strong>Количество</strong></label>
+                <input class="form-control" type="number" min="1" />
+              </div>
+
+              <div class="my-2">
+                <button class="btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-x"
+                    viewBox="0 2 16 16"
+                  >
+                    <path
+                      d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
+                </button>
+                <button class="btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-basket"
+                    viewBox="0 2 16 16"
+                  >
+                    <path
+                      d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"
+                    />
+                  </svg>
+                  1 - 303,47€
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-5 col-xl-3 col-xxl-2 p-3 item m-1 border border-secondary rounded"
+            >
+              <div class="c-mark">
+                <label><strong>Марка</strong></label>
+                <p>AE</p>
+              </div>
+
+              <div class="art border-top">
+                <label><strong>Артикул</strong></label>
+                <p>61-0641953</p>
+                <label class="small text-secondary">поставка 10 дней</label>
+              </div>
+
+              <div class="name border-top">
+                <label><strong>Название</strong></label>
+                <p>КОНДЕНСАТОР BMW F01,F02,F10</p>
+              </div>
+
+              <div class="price border-top">
+                <label><strong>Цена</strong></label>
+                <p>303,47€</p>
+              </div>
+
+              <div class="count border-top">
+                <label><strong>Количество</strong></label>
+                <input class="form-control" type="number" min="1" />
+              </div>
+
+              <div class="my-2">
+                <button class="btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-x"
+                    viewBox="0 2 16 16"
+                  >
+                    <path
+                      d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
+                </button>
+                <button class="btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-basket"
+                    viewBox="0 2 16 16"
+                  >
+                    <path
+                      d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"
+                    />
+                  </svg>
+                  0
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
