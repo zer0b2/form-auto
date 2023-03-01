@@ -5,3 +5,25 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+
+// icon zooming
+var modal = document.getElementById('myModal')
+var imgs = document.getElementsByClassName('example-image');
+var modalImg = document.getElementById('img01')
+
+for(i = 0; i < imgs.length; i++){
+    var picture = imgs[i];
+    picture.onclick = function(){
+        openImg(this);
+    }
+}
+
+
+function openImg(pic){
+    modal.style.display='block';
+    modalImg.src = pic.src;
+}
+
+function close(){
+    modal.style.display ='none';
+}
