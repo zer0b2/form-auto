@@ -10,7 +10,6 @@
 var modal = document.getElementById('myModal')
 var imgs = document.getElementsByClassName('example-image');
 var modalImg = document.getElementById('img01')
-
 for(i = 0; i < imgs.length; i++){
     var picture = imgs[i];
     picture.onclick = function(){
@@ -20,10 +19,22 @@ for(i = 0; i < imgs.length; i++){
 
 
 function openImg(pic){
-    modal.style.display='block';
+    //modal.style.display='grid';
+    modal.style.display='inline-block';
     modalImg.src = pic.src;
 }
 
 function close(){
     modal.style.display ='none';
 }
+
+
+function lineAddImage(){
+    modal.appendChild(imgs[0])
+};
+function myScript (e){
+    let scroll = modal.scrollLeft;
+    if(scroll >= (modal.scrollWidth - modal.clientWidth)){ lineAddImage()};
+
+};
+modal.addEventListener("scroll", (e) => {myScript(e)});
