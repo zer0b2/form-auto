@@ -11,15 +11,18 @@
 let n = 0 ;
 
 var modal = document.getElementById('myModal')
-var imgs = document.getElementsByClassName('example-image');
+var imgs = document.getElementsByClassName('gallery-for-id');
+var galleries = [];
 var modalImg = document.getElementById('img01')
+
 for(i = 0; i < imgs.length; i++){
+    //galleries[imgs[i].parentNode.parentNode.id.split('gallery')[1]] =[]
     var picture = imgs[i];
     picture.onclick = function(){
         openImg(this);
     }
 }
-
+console.log(galleries)
 
 function openImg(pic){
     //modal.style.display='grid';
@@ -46,7 +49,7 @@ function lineAddImage(n){
 };
 function myScript (e){
     let scroll = modal.scrollLeft;
-    if(scroll >= (modal.scrollWidth - modal.clientWidth)){ n++ ;lineAddImage(n%imgs.length)};
+    if(scroll >= (modal.scrollWidth - modal.clientWidth -10)){ n++ ;lineAddImage(n % imgs.length)};
     //console.log(n)
 
 };
