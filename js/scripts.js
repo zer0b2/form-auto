@@ -13,7 +13,10 @@ let n = 0 ;
 var modal = document.getElementById('myModal')
 var imgs = document.getElementsByClassName('gallery-for-id');
 var galleries = [];
-var modalImg = document.getElementById('img01')
+var modalImg = document.getElementById('img01');
+
+let singInBtn = document.getElementById('signIn');
+let rowVert = document.getElementById('rowVert')
 
 for(i = 0; i < imgs.length; i++){
     //galleries[imgs[i].parentNode.parentNode.id.split('gallery')[1]] =[]
@@ -53,4 +56,27 @@ function myScript (e){
     //console.log(n)
 
 };
-modal.addEventListener("scroll", (e) => {myScript(e)});
+// modal.addEventListener("scroll", (e) => {myScript(e)});
+
+
+function signIn() {
+    console.log('работает')
+    if(singInBtn.innerText == 'Войти') {
+        singInBtn.innerText = 'Выйти';
+    } else {
+        singInBtn.innerText = 'Войти'; 
+    }
+
+    if(!document.getElementById('greet')) {
+        let newDiv = document.createElement('div')
+        newDiv.innerHTML = '<div class="col-12 d-flex justify-content-end"><p>Здравствуйте, example@mail.ru</p></div>'
+        newDiv.id = 'greet'
+        rowVert.append(newDiv)
+    } else {
+        let newDiv = document.getElementById('greet')
+        rowVert.removeChild(newDiv)
+    }
+
+}
+
+singInBtn.addEventListener('click', signIn)
