@@ -1,6 +1,7 @@
 body {
     overflow: overlay; /* Hide scrollbars */
   }
+
 .btn-primary,
 .dropdown-toggle {
   background-color: #0191ff;
@@ -11,27 +12,15 @@ body {
 }
 
 .banner {
-  background-image: url(../img/jambotron.jpg);
-  max-width: 40vh;
-  height: 28vh;
-  background-position: center;
-  background-size: cover;
-}
-
-.navbar {
-  padding: 0;
-}
-.navbar-brand{
-  margin-right:0!important;
-}
-.navbar-brand img {
-  width: 100%;
-  margin: 7px 0 4px -2px;
-  object-fit: contain;
+width: 100%;
 }
 
 .navBtn {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0
 }
 
 .logo {
